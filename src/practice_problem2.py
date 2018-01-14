@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jack Speedy.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -42,7 +42,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4 reasonable   ** tests.
     #
@@ -55,8 +55,21 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
+    #Test 1
+    print('Expected: [8,9,10,11,12]')
+    print('Actual: ' + practice_problem2a([6,7,8,9,10], 2))
 
+    # Test 2
+    print('Expected: [4,5,6,7,8]')
+    print('Actual: ' + practice_problem2a([6, 7, 8, 9, 10], -2))
 
+    # Test 3
+    print('Expected: [8,16,11,-14,14]')
+    print('Actual: ' + practice_problem2a([2, 10, 5, -20, 8], 6))
+
+    # Test 4
+    print('Expected: [0,4,8,12,16]')
+    print('Actual: ' + practice_problem2a([4, 8, 12, 16, 20], -4))
 def practice_problem2a(sequence, delta):
     """
     What comes in:
@@ -75,8 +88,11 @@ def practice_problem2a(sequence, delta):
       :type sequence: [int]
       :type delta:    int
     """
+    for k in range(len(sequence)):
+        sequence[k] = sequence[k] + delta
+    return str(sequence)
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -169,8 +185,14 @@ def practice_problem2b(sequence):
     Type hints:
       :type sequence [str]
     """
+    new_string = ''
+    for k in range(len(sequence)):
+        if len(sequence[k]) > 0:
+            word = sequence[k]
+            new_string = new_string + word[0]
+    return new_string
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
